@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Application des actualités</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+		<link rel="stylesheet" type="text/css" href="css/util.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type='text/javascript'  src='http://code.jquery.com/jquery-1.8.3.js'></script>
+		<script type="text/javascript"  src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.js"></script>
+		<link rel="stylesheet" type="text/css"  href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.css">
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<div id="page" data-role="page" data-theme="b">
+			<div data-role="content">
+				<div class="limiter">
+					<div class="container-login100">
+						<div class="wrap-login100">
+							<form class="login100-form validate-form">
+								<span class="login100-form-logo"><i class="zmdi zmdi-landscape"></i></span>
+								<span class="login100-form-title p-b-34 p-t-27">Authentification</span>
+								<div class="wrap-input100 validate-input" data-validate = "Enter username">
+									<input class="input100" type="text" name="username" placeholder="Username">
+									<span class="focus-input100" data-placeholder="&#xf207;"></span>
+								</div>
+								<div class="wrap-input100 validate-input" data-validate="Enter password">
+									<input class="input100" type="password" name="pass" placeholder="Password">
+									<span class="focus-input100" data-placeholder="&#xf191;"></span>
+								</div>
+								<div class="contact100-form-checkbox">
+									<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+									<label  for="ckb1">Garder ma session active</label>
+								</div>
+								<div class="container-login100-form-btn">
+									<button class="login100-form-btn" type=button onclick=window.location.href='bienvenue.html'>se connecter</button>
+								</div>
+								<div class="text-center p-t-90">
+									<a class="txt1" href="forget.html" rel="external">mot de passe oubliée?</a>
+									<div class="text-center p-t-90">
+										<a href="inscription.html" id="showregistration" rel="external">créer un compte</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="dropDownSelect1"></div>
+				</div>
+				<script type="text/javascript" src="index.js"></script>
+				<script type="text/javascript">
+					let ticks = setInterval((timer),10);
+					function timer() {
+						function lockDeviceOrientationCallback() {
+							// set to either landscape
+							creen.orientation.lock('portrait');
+							console.log("locking device orientation...");
+						}
+						document.addEventListener("deviceready", lockDeviceOrientationCallback, false);
+					}
+				</script>
+				 <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  // TODO: Replace with your project's customized code snippet
+		  var config = {
+            apiKey: "AIzaSyA5_XTy7_NBFENFPcI93dy_QGhNJRFMqG0",
+            authDomain: "application-716a6.firebaseapp.com",
+            databaseURL: "https://application-716a6.firebaseio.com",
+            projectId: "application-716a6",
+            storageBucket: "application-716a6.appspot.com",
+            messagingSenderId: "509862861876"
+          };         
+		
+		firebase.initializeApp(config);    
+		</script>
+			</body>
+		</html>
